@@ -40,7 +40,7 @@ defmodule Envvar do
       iex> Envvar.load()
       # Loads vars from .env file
 
-      iex> Envvar.load("custom.env")
+      iex> Envvar.load(".env")
       # Loads vars from custom.env file
   """
   def load(file \\ ".env") do
