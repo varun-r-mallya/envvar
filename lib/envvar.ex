@@ -1,9 +1,48 @@
 defmodule Envvar do
   @moduledoc """
-  A simple dotenv parser that actually works for loading environment variables from a .env file.
+  A simple dotenv parser that actually works for loading environment variables from a `.env` file.
+
+  To install,
+  1. Add `envvar` to your list of dependencies in `mix.exs`:
+
+    ```
+      def deps do
+        [
+          {:envvar, "~> 0.1.0"}
+        ]
+      end
+    ```
+  2. Add the following lines to `config/runtime.exs` and read environment variables as required
+
+    ```
+      require Envvar
+      Envvar.load()
+    ```
+
   """
 
   @spec load(String.t()) :: :ok
+  @doc """
+  Loads environment variables from a file.
+  By default, it reads from ".env" file if no file path is specified.
+
+  ## Parameters
+
+    * `file` - Path to the environment file (default: ".env")
+
+  ## Returns
+
+    * Returns the result of parsing and setting environment variables if file is read successfully
+    * Prints warning message if file cannot be read
+
+  ## Examples
+
+      iex> Envvar.load()
+      # Loads vars from .env file
+
+      iex> Envvar.load("custom.env")
+      # Loads vars from custom.env file
+  """
   def load(file \\ ".env") do
     file
     |> File.read()
