@@ -23,7 +23,7 @@ defmodule Envvar.MixProject do
 
   defp description do
     """
-    Sinple dot env parser that actually works
+    Simple dot env parser that actually works
     """
   end
 
