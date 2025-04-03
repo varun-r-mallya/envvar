@@ -1,0 +1,21 @@
+# Envvar
+
+A simple environment variable parser for Elixir that actually works unlike the intended one
+
+## Installation
+
+If [available in Hex](https://hex.pm/docs/publish), the package can be installed
+by adding `envvar` to your list of dependencies in `mix.exs`:
+
+```elixir
+def deps do
+  [
+    {:envvar, "~> 0.1.0"}
+  ]
+end
+```
+
+Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
+and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
+be found at <https://hexdocs.pm/envvar>.
+
