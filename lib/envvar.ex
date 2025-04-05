@@ -35,13 +35,10 @@ defmodule Envvar do
     * Returns the result of parsing and setting environment variables if file is read successfully
     * Prints warning message if file cannot be read
 
-  ## Examples
+  ## Example
 
-      iex> Envvar.load()
-      # Loads vars from .env file
-
-      iex> Envvar.load(".env")
-      # Loads vars from custom.env file
+      Envvar.load() # Loads from ".env" file
+      Envvar.load("config/.env") # Loads from "config/.env" file
   """
   def load(file \\ ".env") do
     file
